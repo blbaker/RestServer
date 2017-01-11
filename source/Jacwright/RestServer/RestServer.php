@@ -277,7 +277,7 @@ class RestServer
 					foreach ($matches as $arg => $match) {
 						if (is_numeric($arg)) continue;
 						$paramMap[$arg] = $match;
-
+            
 						if (isset($args[$arg])) {
 							$params[$args[$arg]] = $match;
 						}
@@ -313,12 +313,12 @@ class RestServer
 		foreach ($methods as $method) {
 			$doc = $method->getDocComment();
 			$noAuth = strpos($doc, '@noAuth') !== false;
-			if (preg_match_all('/@url[ \t]+(GET|POST|PUT|PATCH|DELETE|HEAD|OPTIONS)[ \t]+\/?(\S*)/s', $doc, $matches, PREG_SET_ORDER)) {
+			if (preg_match_all('/@api[ \t]+({get}|{post}|{put}|{patch}|{delete}|{head}|{options})[ \t]+\/?(\S*)/s', $doc, $matches, PREG_SET_ORDER)) {
 
 				$params = $method->getParameters();
 
 				foreach ($matches as $match) {
-					$httpMethod = $match[1];
+					$httpMethod = strtoupper(str_replace(array("{","}"), "", $match[1]));
 					$url = $basePath . $match[2];
 					if ($url && $url[strlen($url) - 1] == '/') {
 						$url = substr($url, 0, -1);
