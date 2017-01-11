@@ -1,4 +1,4 @@
-*This is a fork of Jackwright's RESTServer but modified to work with apidocs*
+*This is a fork of [Jackwright's RESTServer](https://github.com/jacwright/RestServer/) but modified to work with [apidocs](https://github.com/apidoc/apidoc/)*
 
 ## Jacwright RESTServer v1.0.1
 
