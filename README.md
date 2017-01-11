@@ -2,7 +2,7 @@
 
 *Use RESTServer like you normally would, but use apidoc's @api annotations instead of RESTServer's @url annotations*
 
-**Instead of RESTServer's annoations:**
+**Instead of RESTServer's annotations:**
 
     @url POST /users/$id
 
