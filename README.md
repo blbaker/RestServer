@@ -1,3 +1,15 @@
+*This is a fork of [Jackwright's RESTServer](https://github.com/jacwright/RestServer/) but modified to work with [apidocs](https://github.com/apidoc/apidoc/)*
+
+*Use RESTServer like you normally would, but use apidoc's @api annotations instead of RESTServer's @url annotations*
+
+**Instead of RESTServer's annotations:**
+
+    @url POST /users/$id
+
+**Use apidocs':**
+
+    @api {post} /users/:id
+
 ## Jacwright RESTServer v1.0.1
 
 A PHP REST server for providing a very light-weight REST API. Very easy to set up and get going. Independent from other libraries and frameworks. Supports HTTP authentication.
