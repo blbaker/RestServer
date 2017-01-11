@@ -1,6 +1,6 @@
 *This is a fork of [Jackwright's RESTServer](https://github.com/jacwright/RestServer/) but modified to work with [apidocs](https://github.com/apidoc/apidoc/)*
 
-*Use RESTServer like you normall would, but use apidoc's @api instead of @url for your url annotations.*
+*Use RESTServer like you normally would, but use apidoc's @api instead of @url for your url annotations.*
 
 ## Jacwright RESTServer v1.0.1
 
